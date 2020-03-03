@@ -1,6 +1,11 @@
 .App {
   text-align: center;
-}
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +41,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width:100
+} */
