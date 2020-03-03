@@ -10,7 +10,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 2,
@@ -18,7 +19,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-watchtower.jpg',
         resource: null,
         row: 1,
-        column: 1
+        column: 1,
+        status: 2
     },
     { 
         id: 3,
@@ -26,7 +28,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-observatory.jpg',
         resource: null,
         row: 3,
-        column: 3
+        column: 3,
+        status: 2
     },
     { 
         id: 4,
@@ -34,7 +37,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-island-tile.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 5,
@@ -42,7 +46,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 6,
@@ -50,7 +55,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 7,
@@ -58,7 +64,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 8,
@@ -66,7 +73,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 9,
@@ -74,7 +82,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 10,
@@ -82,7 +91,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 11,
@@ -90,7 +100,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 12,
@@ -98,7 +109,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 13,
@@ -106,7 +118,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 14,
@@ -114,7 +127,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 15,
@@ -122,7 +136,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 16,
@@ -130,7 +145,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 17,
@@ -138,7 +154,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 18,
@@ -146,7 +163,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 19,
@@ -154,7 +172,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 20,
@@ -162,7 +181,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 21,
@@ -170,7 +190,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 22,
@@ -178,7 +199,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 23,
@@ -186,7 +208,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     },
     { 
         id: 24,
@@ -194,7 +217,8 @@ const tiles = [
         img: 'https://www.sunderedrealm.com/wp-content/uploads/2019/10/fi-tile-twilight-hollow.jpg',
         resource: null,
         row: 2,
-        column: 2
+        column: 2,
+        status: 2
     }
 ]
 
