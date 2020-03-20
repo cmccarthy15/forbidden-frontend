@@ -12,15 +12,15 @@ const App = props => {
   const [board, setBoard] = useState(0)
 
   useEffect(() => {
+    console.log('oh boy oh boy', board)
     if(board){
-      let newTiles = tiles.map((tile, index) => {
-        console.log(tile, boards[board - 1])
-        tile.row = boards[board - 1].rows[index]
-        tile.column = boards[board - 1].columns[index]
-        return tile
+      fetch(`http://localhost:3000/api/v1/boards/${board}`)
+      .then(res => res.json())
+      .then(board => {
+        console.log('got board', board)
+        setTiles(board.tiles)
+        props.history.push(`/boards/${board.id}`)
       })
-  
-      setTiles(newTiles)
     }
   }, [board])
 
@@ -43,10 +43,10 @@ const App = props => {
     // debugger;
     // if(board) {debugger; console.log('max val', Math.max(boards[board - 1].rows))}
     return (
-      board && <Container max={Math.max(...boards[board - 1].rows, ...boards[board - 1].columns )}>
+      board && <Container max={9}>
         {tiles.map(tile => {
           return (
-          <Tile key={tile.id} {...tile} max={Math.max(...boards[board - 1].rows, ...boards[board - 1].columns)} updateTileState={updateTileState} />
+          <Tile key={tile.id} {...tile} max={9} updateTileState={updateTileState} />
         )})}
       </Container>
     )
@@ -54,7 +54,7 @@ const App = props => {
 
   const handleBoardSelect = e => {
     setBoard(e.target.value)
-    props.history.push('/play')
+    // should be after fetch
   }
 
   const renderVariantList = () => {
@@ -70,7 +70,7 @@ const App = props => {
       <Nav>Welcome to Forbidden Island!</Nav>
       <Switch>
         <Route path="/start" render={() => <div>Choose your variant {renderVariantList()} </div>} />
-        <Route path="/play" render={() => renderContainer()} />
+        <Route path="/boards/:id" render={() => renderContainer()} />
         <Route path="/" render={() => <img src="https://lh3.googleusercontent.com/p/AF1QipObnV0hdDKYlbvnc4noAkxb0kHRW5QQWvQgLiU1=w660-h440-c"/>} />
       </Switch>
       

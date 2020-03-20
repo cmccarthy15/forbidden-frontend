@@ -5,12 +5,13 @@ import { tileSize } from './constants';
 
 
 function Tile(props) {
-    const { id, row, column, img, name, status, max } = props;
+    const { id, x, y, img, name, status, max } = props;
+    console.log('tile', x, " : ", y)
 
     // console.log(status)
 
     return (
-        <FlipCard row={row} col={column} status={status} max={max}>
+        <FlipCard x={x} y={y} status={status} max={max}>
             <FlipCardInner status={status} onClick={(e) => props.updateTileState(e, id)}>
                 {!!status && <Shovel status={status} onClick={(e) => props.updateTileState(e, id, 2)}><GiDigDug /></Shovel>}
                 <FlipCardBase max={max}><img className="tile-img back" src={'https://i.pinimg.com/originals/ee/af/93/eeaf935fa11a123af3ee9bea1906684b.jpg'} alt={name}/></FlipCardBase>
@@ -27,8 +28,9 @@ const FlipCard = styled.div`
     height: calc(calc(90vh - ${props => props.max * 10}px) / ${props => props.max});
     border: 1px solid red; 
     perspective: 1000px;
-    grid-column-start: ${ props => !props.status ? -1 : props.col};
-    grid-row-start: ${ props => !props.status ? -1 : props.row};
+    visibility: ${ props => props.status === 'gone' ? 'none' : 'visible'};
+    grid-column-start: ${ props => props.y};
+    grid-row-start: ${ props => props.x};
 `
 
 const FlipCardInner = styled.div`
