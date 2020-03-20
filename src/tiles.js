@@ -1,9 +1,34 @@
 const defaultBoard = {
+    id: 1,
+    name: 'Default',
     rows: [1,1,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,6,6],
     columns: [3,4,2,3,4,5,1,2,3,4,5,6,1,2,3,4,5,6,2,3,4,5,3,4]
 }
 
-const tiles = [
+const archOfFate = {
+    id: 2,
+    name: 'Arch of Fate',
+    rows: [2,2,2,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6],
+    columns: [4,5,6,3,4,5,6,7,2,3,4,6,7,8,1,2,3,7,8,9,1,2,8,9]
+}
+
+const boneIsland = {
+    id: 3,
+    name: 'Bone Island',
+    rows: [1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4],
+    columns: [2,3,6,7,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,2,3,6,7]
+}
+
+const bayOfGulls = {
+    id: 4,
+    name: 'Bay of Gulls',
+    rows: [1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,6,6],
+    columns: [4,5,4,5,1,4,5,8,1,2,3,4,5,6,7,8,2,3,4,5,6,7,4,5 ]
+}
+
+export const variantList = [defaultBoard, archOfFate, boneIsland, bayOfGulls]
+
+export const tiles = [
     { 
         id: 1,
         name: 'Twilight Hollow',
@@ -227,5 +252,6 @@ tiles.forEach((tile, index) => {
     tile.column = defaultBoard.columns[index]
 })
 
-export { tiles }
+
+// export { tiles, defaultBoard, archOfFate }
 

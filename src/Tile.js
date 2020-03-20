@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import { GiDigDug } from 'react-icons/gi';
+import { tileSize } from './constants';
+
 
 function Tile(props) {
-    const { id, row, column, img, name, under } = props;
+    const { id, row, column, img, name, status, max } = props;
 
-    const [showFront, setShowFront] = useState(true)
-    console.log(under)
+    // console.log(status)
 
     return (
-        <FlipCard row={row} col={column}>
-            <FlipCardInner under={under} onClick={(e) => props.updateTileState(e, id)}>
-                <Shovel under={under} onClick={(e) => props.updateTileState(e, id, false)}><GiDigDug /></Shovel>
-                <FlipCardBase><img className="tile-img back" src={'https://i.pinimg.com/originals/ee/af/93/eeaf935fa11a123af3ee9bea1906684b.jpg'} alt={name}/></FlipCardBase>
-                <FlipCardBase><img className="tile-img front" src={img} alt={name}/></FlipCardBase>
+        <FlipCard row={row} col={column} status={status} max={max}>
+            <FlipCardInner status={status} onClick={(e) => props.updateTileState(e, id)}>
+                {!!status && <Shovel status={status} onClick={(e) => props.updateTileState(e, id, 2)}><GiDigDug /></Shovel>}
+                <FlipCardBase max={max}><img className="tile-img back" src={'https://i.pinimg.com/originals/ee/af/93/eeaf935fa11a123af3ee9bea1906684b.jpg'} alt={name}/></FlipCardBase>
+                <FlipCardBase max={max}><img className="tile-img front" src={img} alt={name}/></FlipCardBase>
             </FlipCardInner>
 
         </FlipCard>
@@ -22,12 +23,12 @@ function Tile(props) {
 
 const FlipCard = styled.div`
     background-color: transparent;
-    width: 150px;
-    height: 150px;
+    width: calc(calc(90vh - ${props => props.max * 10}px) / ${props => props.max});
+    height: calc(calc(90vh - ${props => props.max * 10}px) / ${props => props.max});
     border: 1px solid red; 
     perspective: 1000px;
-    grid-column-start: ${ props => props.col};
-    grid-row-start: ${ props => props.row};
+    grid-column-start: ${ props => !props.status ? -1 : props.col};
+    grid-row-start: ${ props => !props.status ? -1 : props.row};
 `
 
 const FlipCardInner = styled.div`
@@ -39,7 +40,7 @@ const FlipCardInner = styled.div`
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
-    transform: rotateY(${ props => props.under ? 180 : 0}deg);
+    transform: rotateY(${ props => props.status !== 2 ? 180 : 0}deg);
 `
 
 const FlipCardBase = styled.div`
@@ -49,7 +50,7 @@ const FlipCardBase = styled.div`
     backface-visibility: hidden;
     
     > .tile-img {
-        height: 150px;
+        height: calc(calc(90vh - ${props => props.max * 10}px) / ${props => props.max});
     }
 
     > .back {
@@ -68,7 +69,7 @@ const Shovel = styled.span`
   border-radius: 30%;
   opacity: 1;
   z-index: 2;
-  visibility: ${props => props.under ? 'visible' : 'hidden'}
+  visibility: ${props => props.under !== 2 ? 'visible' : 'hidden'}
 `
 
 export default Tile;
